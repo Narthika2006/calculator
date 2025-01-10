@@ -47,12 +47,12 @@ function reset(){
     }
 
     
-    const body=document.querySelector('table');
-    const head=document.getElementById('head');
-    const color=['blue','green','violet'];
-    head.style.backgroundColor='white';
-    body.addEventListener('click',function(){
-       const colorIndex=parseInt(Math.random()*color.length);
-       head.style.backgroundColor=color[colorIndex];
-    })
-    
+    const body = document.querySelector('body'); 
+const color = ['orange', 'green', 'violet']; 
+
+const button = document.querySelector('table'); // Select the button
+
+button.addEventListener('click', function () {
+  const colorIndex = Math.floor(Math.random() * color.length); // Get a random color index
+  body.style.backgroundColor = color[colorIndex]; // Change the background color
+});
